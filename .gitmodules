@@ -1,0 +1,3 @@
+[submodule "themes/mysite"]
+	path = themes/mysite
+	url = https://github.com/arusahni/website-template.git

@@ -90,6 +90,7 @@ SIDEBAR_LINKS = {
 
 post_pages = (
     ("posts/*.txt", "blog", "post.tmpl", True),
+    ("posts/*.md", "blog", "post.tmpl", True),
     ("stories/*.txt", "stories", "story.tmpl", False),
 )
 
@@ -265,7 +266,7 @@ DATE_FORMAT = '%Y-%m-%d %-I:%M%P'
 # }
 
 # Show only teasers in the index pages? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # A HTML fragment describing the license, for the sidebar. Default is "".
 # I recommend using the Creative Commons' wizard:

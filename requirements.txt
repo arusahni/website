@@ -1,4 +1,5 @@
 Mako==0.8.1
+Markdown==2.3.1
 MarkupSafe==0.18
 Nikola==5.5
 Pillow==2.1.0
@@ -15,5 +16,6 @@ lxml==3.2.1
 nodeenv==0.6.6
 pyinotify==0.9.4
 pytz==2013b
+requests==1.2.3
 six==1.3.0
 wsgiref==0.1.2

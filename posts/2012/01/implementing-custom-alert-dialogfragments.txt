@@ -26,8 +26,9 @@ I've be saving much of what I have learned for another post, but I felt like sha
 
     The button strip isn't displayed correctly
     
-This is implemented via...
+.. TEASER_END
 
+This is implemented via...
 
 .. code:: xml
 

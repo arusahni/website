@@ -38,9 +38,9 @@ Functionality
 
 One would think this is the area in which an official client would excel.  However, after using the client for a week, there were several deficiencies that took away from the overall experience of the program.
 	
-  * **Limited photo support**: Not all popular image services are supported.  This is something that they claim to have fixed in a recent update, but I still find it unsatisfactory.	
-  * **Bad touchscreen UI**: Yes, I know, BlackBerry doesn't really come to mind when associated with the word "touchscreen", but with the huge push the Storm received one would have hoped for a sensible UI.  Unfortunately, the icon bar at the top of the app has hard-to-hit icons, and when the virtual keyboard was out I found myself accidentally tapping the "Update" button, leaving me to suffer from the indignity of a partial tweet.
-  * **Insufficient Refresh Intervals**:  This is a purely subjective issue, but I like updating my timeline every 3 minutes.  They didn't offer a rate that low.
+* **Limited photo support**: Not all popular image services are supported.  This is something that they claim to have fixed in a recent update, but I still find it unsatisfactory.	
+* **Bad touchscreen UI**: Yes, I know, BlackBerry doesn't really come to mind when associated with the word "touchscreen", but with the huge push the Storm received one would have hoped for a sensible UI.  Unfortunately, the icon bar at the top of the app has hard-to-hit icons, and when the virtual keyboard was out I found myself accidentally tapping the "Update" button, leaving me to suffer from the indignity of a partial tweet.
+* **Insufficient Refresh Intervals**:  This is a purely subjective issue, but I like updating my timeline every 3 minutes.  They didn't offer a rate that low.
 
 Judgement
 ---------

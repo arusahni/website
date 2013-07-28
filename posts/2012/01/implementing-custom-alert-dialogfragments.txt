@@ -9,6 +9,9 @@
 
 .. role:: strike
     :class: strike
+    
+.. role:: java(code)
+    :language: java
 
 So, I've been working on further revisions to `my app <https://market.android.com/details?id=com.thirteenbytes.kongforums>`_.  The most notable of these revisions involves switching action bar implementations from `GreenDroid <https://github.com/cyrilmottier/GreenDroid>`_ to `ActionBarSherlock <http://actionbarsherlock.com/>`_.  While this will benefit me tremendously as I'll be able to use native Android 3.0+ components when running on those platforms, it means that I need to start using Fragments as well as the rest of the `Android Support Package <http://developer.android.com/sdk/compatibility-library.html>`_.
 
@@ -87,7 +90,7 @@ This is implemented via...
     
 While this may seem like a minor UI issue at first, there's something more to it - Android versions 3.0 and above switched the order of the default dialog button actions, placing the positive button on the right and the negative on the left.  The dialog above is using the pre-2.0 order.  When you're dealing with muscle memory, such UX concerns become important (especially for deletion dialogs).
 
-So, when refactoring the `PaginationDialog` into its own `DialogFragment`, I decided to do more than port my code.  I realized that the native `AlertDialog` class uses the operating system order, and is styled to match the OS version's conventions.  If only there was a way I could throw my layout into that... wait! There is - `AlertDialog.Builder()` has a `setView()` method!
+So, when refactoring the :java:`PaginationDialog` into its own :java:`DialogFragment`, I decided to do more than port my code.  I realized that the native :java:`AlertDialog` class uses the operating system order, and is styled to match the OS version's conventions.  If only there was a way I could throw my layout into that... wait! There is - :java:`AlertDialog.Builder()` has a :java:`setView()` method!
 
 By removing the buttons from the layout XML file and manually inflating it, I can stuff my Views into the dialog and piggyback off its functionality.
 
@@ -176,7 +179,7 @@ My buttonless layout...
     	}
     }
     
-The important lines in the code snippet displayed above are 28, 29 and 32.  On 28, the app gets the inflater being used by the Activity].  Remember, you should never instantiate a `LayoutInflater` directly.  After that, it's pretty trivial to generate the dialog's content (29) and then insert it into an `AlertDialog`'s View hierarchy.
+The important lines in the code snippet displayed above are 28, 29 and 32.  On 28, the app gets the inflater being used by the Activity].  Remember, you should never instantiate a :java:`LayoutInflater` directly.  After that, it's pretty trivial to generate the dialog's content (29) and then insert it into an :java:`AlertDialog`'s View hierarchy.
 
 Run it and what do you get?
 

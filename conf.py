@@ -135,11 +135,11 @@ post_compilers = {
 # output / TRANSLATION[lang] / TAG_PATH / index.html (list of tags)
 # output / TRANSLATION[lang] / TAG_PATH / tag.html (list of posts for a tag)
 # output / TRANSLATION[lang] / TAG_PATH / tag.xml (RSS feed for a tag)
-# TAG_PATH = "categories"
+TAG_PATH = "blog/categories"
 
 # If TAG_PAGES_ARE_INDEXES is set to True, each tag's page will contain
 # the posts themselves. If set to False, it will be just a list of links.
-# TAG_PAGES_ARE_INDEXES = True
+TAG_PAGES_ARE_INDEXES = True
 
 # Final location is output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 INDEX_PATH = "blog"
@@ -150,7 +150,7 @@ INDEX_PATH = "blog"
 # output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html
-# ARCHIVE_PATH = ""
+ARCHIVE_PATH = "blog"
 # ARCHIVE_FILENAME = "archive.html"
 
 # Final locations are:
@@ -358,7 +358,7 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-# INDEX_DISPLAY_POST_COUNT = 10
+INDEX_DISPLAY_POST_COUNT = 10
 
 # RSS_LINK is a HTML fragment to link the RSS or Atom feeds. If set to None,
 # the base.tmpl will use the feed Nikola generates. However, you may want to
@@ -366,7 +366,7 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 # RSS_LINK = None
 
 # Show only teasers in the RSS feed? Default to True
-# RSS_TEASERS = True
+RSS_TEASERS = True
 
 # A search form to search this site, for the sidebar. You can use a google
 # custom search (http://www.google.com/cse/)

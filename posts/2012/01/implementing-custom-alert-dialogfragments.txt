@@ -175,7 +175,7 @@ My buttonless layout...
     	}
     }
     
-    The important lines in the code snippet displayed above are 28, 29 and 32.  On 28, the app gets the inflater being used by the Activity].  Remember, you should never instantiate a `LayoutInflater` directly.  After that, it's pretty trivial to generate the dialog's content (29) and then insert it into an `AlertDialog`'s View hierarchy.
+The important lines in the code snippet displayed above are 28, 29 and 32.  On 28, the app gets the inflater being used by the Activity].  Remember, you should never instantiate a `LayoutInflater` directly.  After that, it's pretty trivial to generate the dialog's content (29) and then insert it into an `AlertDialog`'s View hierarchy.
 
 Run it and what do you get?
 

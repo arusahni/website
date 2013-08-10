@@ -168,7 +168,9 @@ ARCHIVE_PATH = "blog"
 # relative URL.
 #
 # If you don't need any of these, just set to []
-# REDIRECTIONS = []
+REDIRECTIONS = [
+    ('index.html', 'blog/'),
+]
 
 # Commands to execute to deploy. Can be anything, for example,
 # you may use rsync:

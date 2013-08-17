@@ -371,7 +371,7 @@ INDEX_DISPLAY_POST_COUNT = 10
 RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="AruSahni.net posts" href="http://feeds.feedburner.com/arusahni/entropy" />'
 
 # Show only teasers in the RSS feed? Default to True
-RSS_TEASERS = True
+RSS_TEASERS = False
 
 # A search form to search this site, for the sidebar. You can use a google
 # custom search (http://www.google.com/cse/)

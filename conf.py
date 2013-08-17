@@ -155,7 +155,10 @@ ARCHIVE_PATH = "blog"
 
 # Final locations are:
 # output / TRANSLATION[lang] / RSS_PATH / rss.xml
-# RSS_PATH = ""
+RSS_PATH = "blog"
+
+# Number of posts in RSS feeds
+# FEED_LENGTH = 10
 
 # Slug the Tag URL easier for users to type, special characters are
 # often removed or replaced as well.
@@ -356,7 +359,7 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 # ADD_THIS_BUTTONS = True
 
 # Hide link to source for the posts?
-# HIDE_SOURCELINK = False
+HIDE_SOURCELINK = True
 
 # Modify the number of Post per Index Page
 # Defaults to 10

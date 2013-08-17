@@ -368,7 +368,7 @@ INDEX_DISPLAY_POST_COUNT = 10
 # RSS_LINK is a HTML fragment to link the RSS or Atom feeds. If set to None,
 # the base.tmpl will use the feed Nikola generates. However, you may want to
 # change it for a feedburner feed or something else.
-# RSS_LINK = None
+RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="AruSahni.net posts" href="http://feeds.feedburner.com/arusahni/entropy" />'
 
 # Show only teasers in the RSS feed? Default to True
 RSS_TEASERS = True

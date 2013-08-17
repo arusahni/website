@@ -22,7 +22,7 @@ However, transitioning from a fully Lenovo-supported OS (Windows) to a "we'll al
 
    .. code:: bash
 
-    cat sys/devices/platform/i8042/serio1/serio2/speed
+    cat /sys/devices/platform/i8042/serio1/serio2/speed
     80
   
    and \
@@ -44,7 +44,7 @@ However, transitioning from a fully Lenovo-supported OS (Windows) to a "we'll al
 
    .. code:: bash
   
-    echo -n 210 > /sys/devices/platform/i8042/serio1/serio2/sensitivity
+    echo -n 260 > /sys/devices/platform/i8042/serio1/serio2/sensitivity
     
    Possible values fall within the the range of 0 - 255, inclusive.  Since the results are immediate, you can use trial and error to find a suitable sensitivity.
 	

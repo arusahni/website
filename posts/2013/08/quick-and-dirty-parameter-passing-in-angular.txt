@@ -1,6 +1,6 @@
 .. link: 
 .. description: 
-.. tags: javascript, angularjs
+.. tags: code, javascript, angularjs
 .. date: 2013-08-09 21:27:00
 .. slug: quick-and-dirty-parameter-passing-in-angular
 .. title: Quick and dirty parameter passing in Angular

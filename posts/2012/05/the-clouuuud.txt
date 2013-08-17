@@ -5,6 +5,7 @@
 .. date: 2012-05-19 21:36:35
 .. slug: the-clouuuud
 .. title: The Clouuuud
+.. description: In which I poke fun at a silly email sent to me by my credit union.
 .. comments: true
 
 .. role:: h3

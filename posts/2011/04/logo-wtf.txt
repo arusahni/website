@@ -5,6 +5,7 @@
 .. date: 2011-04-24 22:32:33
 .. slug: logo-wtf
 .. title: Logo WTF
+.. description: In which I present (without comment) a funny advertisement found in a magazine.
 .. comments: true
 .. wordpress_id: 38
 

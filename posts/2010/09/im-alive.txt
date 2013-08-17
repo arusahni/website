@@ -1,5 +1,5 @@
 .. link: 
-.. description: 
+.. description: In which I make excuses for not making blog posts.
 .. tags: the universe and everything
 .. wordpress_id: 8
 .. date: 2010-09-30 20:50:34

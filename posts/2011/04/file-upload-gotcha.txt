@@ -4,6 +4,7 @@
 .. date: 2011-04-03 11:29:45
 .. slug: file-upload-gotcha
 .. title: File upload gotcha...
+.. description: In which I note a silly mistake I made while writing a webapp's upload form.
 .. comments: true
 .. wordpress_id: 38
 

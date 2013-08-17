@@ -481,14 +481,14 @@ RSS_TEASERS = True
 # Specifying the id for either 'site' or 'creator' will be preferred
 # over the cleartext username. Specifying an ID is not necessary.
 # Displaying images is currently not supported.
-# TWITTER_CARD = {
-#     # 'use_twitter_cards': True,  # enable Twitter Cards / Open Graph
-#     # 'site': '@website',  # twitter nick for the website
+TWITTER_CARD = {
+    'use_twitter_cards': True,  # enable Twitter Cards / Open Graph
+    'site': '@IAmAru',  # twitter nick for the website
 #     # 'site:id': 123456,  # Same as site, but the website's Twitter user ID
 #                           # instead.
-#     # 'creator': '@username',  # Username for the content creator / author.
+    'creator': '@IAmAru',  # Username for the content creator / author.
 #     # 'creator:id': 654321,  # Same as creator, but the Twitter user's ID.
-# }
+}
 
 
 # If you want to use formatted post time in W3C-DTF Format

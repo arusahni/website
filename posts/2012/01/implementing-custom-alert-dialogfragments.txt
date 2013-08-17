@@ -4,6 +4,7 @@
 .. date: 2012-01-15 11:30:10
 .. slug: implementing-custom-alert-dialogfragments
 .. title: Implementing Custom Alert DialogFragments
+.. description: In which I detail how to display alert dialogs in Android utilizing the system's button order and styling.
 .. comments: true
 .. wordpress_id: 94
 

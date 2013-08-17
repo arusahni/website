@@ -4,6 +4,7 @@
     .. layout: post
     .. slug: fun-with-spambots
     .. title: Fun With Spambots
+    .. description: In which I waste time and energy for your amusement.
     .. wordpress_id: 61
     .. tags: WTF, funny
 --> 

@@ -5,6 +5,7 @@
 .. date: 2013-01-24 14:15:50
 .. slug: trackpoint-controls-in-linux
 .. title: TrackPoint controls in Linux
+.. description: In which I detail how to fix issues with TrackPoint speed and sensitivity on Linux.
 .. comments: true
 
 .. role:: bash(code)

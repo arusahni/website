@@ -4,6 +4,7 @@
     .. layout: post
     .. slug: pardon-my-dust
     .. title: Pardon My Dust
+    .. description: In which I apologize for the lack of 'Under Contstruction' gifs.
     .. wordpress_id: 4
 -->
 

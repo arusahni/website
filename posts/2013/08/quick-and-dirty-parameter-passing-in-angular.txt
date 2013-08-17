@@ -4,6 +4,7 @@
 .. date: 2013-08-09 21:27:00
 .. slug: quick-and-dirty-parameter-passing-in-angular
 .. title: Quick and dirty parameter passing in Angular
+.. description: In which I discover a nice hack for passing information to controllers instatiated by repeaters in AngularJS.
 .. comments: true
 
 .. role:: javascript(code)

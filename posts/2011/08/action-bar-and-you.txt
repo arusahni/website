@@ -5,6 +5,7 @@
 .. date: 2011-08-13 15:54:41
 .. slug: action-bar-and-you
 .. title: Action Bar and You!
+.. description: In which I walk through adding an ActionBar to an Android app via GreenDroid.
 .. comments: true
 
 .. role:: strike

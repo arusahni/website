@@ -5,6 +5,7 @@
 .. date: 2010/05/20 22:40:32
 .. title: Twitter for Blackberry®
 .. slug: twitter-for-blackberry
+.. description: In which I offer an opinion on the official Twitter app for BlackBerry.
 .. comments: true
 
 *Note: This is an old review that has been sitting in my draft folder.  Rather than delete it, I decided to publish it.  The content may be outdated as I was testing the first official release.*

@@ -55,7 +55,7 @@ No dice.  Why not try broadcasting from the parent scope after I push something 
         };
     };
     
-    var ChildController = function(
+    var ChildController = function() {
         $scope.id = '';
         
         var init = function() {
@@ -68,7 +68,7 @@ No dice.  Why not try broadcasting from the parent scope after I push something 
                 init();
             }
         });
-    );
+    };
     
 Essentially, what I'm doing is passing the ID in via the controller declaration. However, because of the order in which Angular digests the markup, interpolation of templated attributes happens after the construction of the controller. Because of that, I had to instruct the framework to do some extra processing when the interpolation event fired and the :code:`data-id` attribute was updated.  After that the controller is free to finish its initalization phase.
 

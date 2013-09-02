@@ -53,7 +53,7 @@ TRANSLATIONS = {
 
 # Links for the sidebar / navigation bar.
 # You should provide a key-value pair for each used language.
-SIDEBAR_LINKS = {
+NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/archive.html', 'Archives'),
         ('/categories/index.html', 'Tags'),
@@ -91,7 +91,10 @@ SIDEBAR_LINKS = {
 post_pages = (
     ("posts/*.txt", "blog", "post.tmpl", True),
     ("posts/*.md", "blog", "post.tmpl", True),
+    ("posts/*.rst", "posts", "post.tmpl", True),
     ("stories/*.txt", "stories", "story.tmpl", False),
+    ("stories/*.md", "stories", "story.tmpl", False),
+    ("stories/*.rst", "stories", "story.tmpl", False),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -115,7 +118,11 @@ post_compilers = {
     "bbcode": ('.bb',),
     "wiki": ('.wiki',),
     "ipynb": ('.ipynb',),
-    "html": ('.html', '.htm')
+    "html": ('.html', '.htm'),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
 }
 
 # Create by default posts in one file format?
@@ -288,11 +295,14 @@ INDEX_TEASERS = True
 # Default is ''
 CONTENT_FOOTER = ''
 
-# To enable comments via Disqus, you need to create a forum at
-# http://disqus.com, and set DISQUS_FORUM to the short name you selected.
-# If you want to disable comments, set it to False.
-# Default is "nikolademo", used by the demo sites
-DISQUS_FORUM = "arusahni"
+# To use comments, you can choose between different third party comment
+# systems, one of "disqus", "livefyre", "intensedebate", "moot" or "googleplus"
+COMMENT_SYSTEM = "disqus"
+# And you also need to add your COMMENT_SYSTEM_ID which
+# depends on what comment system you use. The default is
+# "nikolademo" which is a test account for Disqus. More information
+# is in the manual.
+COMMENT_SYSTEM_ID = "arusahni"
 
 # Create index.html for story folders?
 # STORY_INDEX = False
@@ -329,6 +339,25 @@ STRIP_INDEXES = True
 # to the metadata
 # PRETTY_URLS = False
 
+# If True, publish future dated posts right away instead of scheduling them.
+# Defaults to False.
+# FUTURE_IS_NOW = False
+
+# If True, future dated posts are allowed in deployed output
+# Only the individual posts are published/deployed; not in indexes/sitemap
+# Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
+# DEPLOY_FUTURE = False
+# If False, draft posts will not be deployed
+# DEPLOY_DRAFTS = True
+
+# Allows scheduling of posts using the rule specified here (new_post -s)
+# Specify an iCal Recurrence Rule: http://www.kanzaki.com/docs/ical/rrule.html
+# SCHEDULE_RULE = ''
+# If True, use the scheduling rule to all posts by default
+# SCHEDULE_ALL = False
+# If True, schedules post to today if possible, even if scheduled hour is over
+# SCHEDULE_FORCE_TODAY = False
+
 # Do you want a add a Mathjax config file?
 # MATHJAX_CONFIG = ""
 
@@ -353,12 +382,27 @@ STRIP_INDEXES = True
 # done in the code, hope you don't mind ;-)
 MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 
-# Enable Addthis social buttons?
-# Defaults to true
-# ADD_THIS_BUTTONS = True
+# Social buttons. This is sample code for AddThis (which was the default for a
+# long time). Insert anything you want here, or even make it empty.
+# SOCIAL_BUTTONS_CODE = """
+# <!-- Social buttons -->
+# <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+# <a class="addthis_button_more">Share</a>
+# <ul><li><a class="addthis_button_facebook"></a>
+# <li><a class="addthis_button_google_plusone_share"></a>
+# <li><a class="addthis_button_linkedin"></a>
+# <li><a class="addthis_button_twitter"></a>
+# </ul>
+# </div>
+# <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+# <!-- End of social buttons -->
+# """
 
 # Hide link to source for the posts?
 HIDE_SOURCELINK = True
+# Copy the source files for your pages?
+# Setting it to False implies HIDE_SOURCELINK = True
+COPY_SOURCES = True
 
 # Modify the number of Post per Index Page
 # Defaults to 10
@@ -414,7 +458,7 @@ RSS_TEASERS = True
 # <input type="text" id="tipue_search_input">
 # </span>"""
 # 
-# ANALYTICS = """
+# BODY_END = """
 # <script type="text/javascript" src="/assets/js/tipuesearch_set.js"></script>
 # <script type="text/javascript" src="/assets/js/tipuesearch.js"></script>
 # <script type="text/javascript">
@@ -448,7 +492,7 @@ RSS_TEASERS = True
 # EXTRA_HEAD_DATA = ""
 # Google analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
-ANALYTICS = """
+BODY_END = """
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -478,6 +522,9 @@ ANALYTICS = """
 # An example re is the following:
 # '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)-(?P<title>.*)\.md'
 # FILE_METADATA_REGEXP = None
+
+# Additional metadata that is added to a post when creating a new_post
+# ADDITIONAL_METADATA = {}
 
 # Nikola supports Twitter Card summaries / Open Graph.
 # Twitter cards make it possible for you to attach media to Tweets
@@ -521,12 +568,15 @@ TWITTER_CARD = {
 #     'planetoid',
 #     'ipynb',
 #     'local_search',
-#     'mustache',
+#     'render_mustache',
 # ]
 
 # List of regular expressions, links matching them will always be considered
 # valid by "nikola check -l"
 # LINK_CHECK_WHITELIST = []
+
+# If set to True, enable optional hyphenation in your posts (requires pyphen)
+# HYPHENATE = False
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.

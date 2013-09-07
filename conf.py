@@ -1,5 +1,5 @@
-
 # -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 import time
 
@@ -66,12 +66,12 @@ NAVIGATION_LINKS = {
 # Below this point, everything is optional
 ##############################################
 
-
-# post_pages contains (wildcard, destination, template, use_in_feed) tuples.
+# POSTS and PAGES contains (wildcard, destination, template) tuples.
 #
 # The wildcard is used to generate a list of reSt source files
 # (whatever/thing.txt).
-# That fragment must have an associated metadata file (whatever/thing.meta),
+#
+# That fragment could have an associated metadata file (whatever/thing.meta),
 # and opcionally translated files (example for spanish, with code "es"):
 #     whatever/thing.txt.es and whatever/thing.meta.es
 #
@@ -82,19 +82,22 @@ NAVIGATION_LINKS = {
 # pages, which will be placed at
 # output / TRANSLATIONS[lang] / destination / pagename.html
 #
-# where "pagename" is specified in the metadata file.
+# where "pagename" is the "slug" specified in the metadata file.
 #
-# if use_in_feed is True, then those posts will be added to the site's
-# rss feeds.
+# The difference between POSTS and PAGES is that POSTS are added
+# to feeds and are considered part of a blog, while PAGES are
+# just independent HTML pages.
 #
 
-post_pages = (
-    ("posts/*.txt", "blog", "post.tmpl", True),
-    ("posts/*.md", "blog", "post.tmpl", True),
-    ("posts/*.rst", "posts", "post.tmpl", True),
-    ("stories/*.txt", "stories", "story.tmpl", False),
-    ("stories/*.md", "stories", "story.tmpl", False),
-    ("stories/*.rst", "stories", "story.tmpl", False),
+POSTS = (
+    ("posts/*.txt", "blog", "post.tmpl"),
+    ("posts/*.md", "blog", "post.tmpl"),
+    ("posts/*.rst", "posts", "post.tmpl"),
+)
+PAGES = (
+    ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.md", "stories", "story.tmpl"),
+    ("stories/*.rst", "stories", "story.tmpl"),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -110,7 +113,7 @@ post_pages = (
 # 'rest' is reStructuredText
 # 'markdown' is MarkDown
 # 'html' assumes the file is html and just copies it
-post_compilers = {
+COMPILERS = {
     "rest": ('.txt', '.rst'),
     "markdown": ('.md', '.mdown', '.markdown'),
     "textile": ('.textile',),
@@ -281,6 +284,14 @@ DATE_FORMAT = '%Y-%m-%d %-I:%M%P'
 
 # Show only teasers in the index pages? Defaults to False.
 INDEX_TEASERS = True
+
+# A HTML fragment with the Read more... link.
+# The following tags exist and are replaced for you:
+# {link}        A link to the full post page.
+# {read_more}   The string “Read more” in the current language.
+# {{            A literal { (U+007B LEFT CURLY BRACKET)
+# }}            A literal } (U+007D RIGHT CURLY BRACKET)
+# READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
 
 # A HTML fragment describing the license, for the sidebar. Default is "".
 # I recommend using the Creative Commons' wizard:

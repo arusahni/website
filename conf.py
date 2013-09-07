@@ -384,19 +384,15 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
-# SOCIAL_BUTTONS_CODE = """
-# <!-- Social buttons -->
-# <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
-# <a class="addthis_button_more">Share</a>
-# <ul><li><a class="addthis_button_facebook"></a>
-# <li><a class="addthis_button_google_plusone_share"></a>
-# <li><a class="addthis_button_linkedin"></a>
-# <li><a class="addthis_button_twitter"></a>
-# </ul>
-# </div>
-# <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
-# <!-- End of social buttons -->
-# """
+SOCIAL_BUTTONS_CODE = """
+<!-- Social buttons -->
+<ul>
+    <li><a href="https://twitter.com/IAmAru" title="Twitter"><i class="icon-twitter"></i><span class="label">twitter</span></a></li>
+    <li><a href="https://github.com/arusahni" title="Github"><i class="icon-github"></i><span class="label">github</span></a></li>
+    <li><a href="https://plus.google.com/106780152352450272697?rel=author" title="Google+"><i class="icon-google-plus"></i><span class="label">google+</span></a></li>
+</ul>
+<!-- End of social buttons -->
+"""
 
 # Hide link to source for the posts?
 HIDE_SOURCELINK = True

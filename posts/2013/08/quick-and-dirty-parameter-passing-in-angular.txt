@@ -10,11 +10,17 @@
 .. role:: javascript(code)
     :language: javascript
 
+**Don't use this code, instead, read this post and then read** |link|_
+
+.. _link: ../09/quick-and-dirty-parameter-passing-in-angular-revisited.html
+
+.. |link| replace:: **the follow-up.**
+
 Since my last post I've switched teams at work after completing a massive redesign of all of my old team's webapps. The overhaul saw the unification of the look and feel of the product's core webapps, with a significant amount of instrumentation and modularity to enable the less aesthetically-inclined people within the team to contribute without reducing the overall coherence of the application.
 
 It just so happens that I joined my new team just as they were planning a massive redesign of their frontend! After assessing our users' needs and desires, we set out to redesign our stack. I'm not going to go into the full details of the transition in this post, but we settled on a Python stack running AngularJS, Flask, uWSGI and nginx (a huge improvement, development-wise, from our current JQueryUI, TurboGears, mod_wsgi and Apache system).
 
-Prior to this redesign effort, my only experiences with client side MVC frameworks were with KnockoutJS, a great javascript library for manging databinding. However, when you scaled it up to include things like validation, complex objects, RESTful behavior against remote resources, and DOM manipulation, it really started to show its seams.  Part of what attracted me to Angular was its similar approach to data binding, but with a stricter separation of concerns between the controller and view layers.
+Prior to this redesign effort, my only experiences with client side MVC frameworks were with KnockoutJS, a great JavaScript library for manging databinding. However, when you scaled it up to include things like validation, complex objects, RESTful behavior against remote resources, and DOM manipulation, it really started to show its seams.  Part of what attracted me to Angular was its similar approach to data binding, but with a stricter separation of concerns between the controller and view layers.
 
 I could continue to wax poetic about our decision, but I'll save that for another post. I just wanted to provide some backstory for this post.  
 
@@ -70,6 +76,8 @@ No dice.  Why not try broadcasting from the parent scope after I push something 
         });
     };
     
-Essentially, what I'm doing is passing the ID in via the controller declaration. However, because of the order in which Angular digests the markup, interpolation of templated attributes happens after the construction of the controller. Because of that, I had to instruct the framework to do some extra processing when the interpolation event fired and the :code:`data-id` attribute was updated.  After that the controller is free to finish its initalization phase.
+Essentially, what I'm doing is passing the ID in via the controller declaration. However, because of the order in which Angular digests the markup, interpolation of templated attributes happens after the construction of the controller. Because of that, I had to instruct the framework to do some extra processing when the interpolation event fired and the :code:`data-id` attribute was updated.  After that the controller is free to finish its initialization phase.
 
 Happy with the outcome, I pushed my changes out to my team and made a note to revisit this block when I get around to refactoring this section (it'll happen, don't worry).
+
+EDIT: `It happened <../09/quick-and-dirty-parameter-passing-in-angular-revisited.html>`_.

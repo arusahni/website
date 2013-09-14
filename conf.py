@@ -92,7 +92,7 @@ NAVIGATION_LINKS = {
 POSTS = (
     ("posts/*.txt", "blog", "post.tmpl"),
     ("posts/*.md", "blog", "post.tmpl"),
-    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.rst", "blog", "post.tmpl"),
 )
 PAGES = (
     ("stories/*.txt", "stories", "story.tmpl"),
@@ -357,9 +357,9 @@ STRIP_INDEXES = True
 # If True, future dated posts are allowed in deployed output
 # Only the individual posts are published/deployed; not in indexes/sitemap
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
-# DEPLOY_FUTURE = False
+# DEPLOY_FUTURE = True
 # If False, draft posts will not be deployed
-# DEPLOY_DRAFTS = True
+DEPLOY_DRAFTS = True
 
 # Allows scheduling of posts using the rule specified here (new_post -s)
 # Specify an iCal Recurrence Rule: http://www.kanzaki.com/docs/ical/rrule.html

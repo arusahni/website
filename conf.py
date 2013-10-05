@@ -3,10 +3,7 @@
 from __future__ import unicode_literals
 import time
 
-##############################################
 # Configuration, please edit
-##############################################
-
 
 # Data about this site
 BLOG_AUTHOR = "Aru Sahni"
@@ -23,15 +20,24 @@ BLOG_DESCRIPTION = "Aru Sahni's personal blog."
 # Nikola is multilingual!
 #
 # Currently supported languages are:
-#   English -> en
-#   Greek -> gr
-#   German -> de
-#   French -> fr
-#   Polish -> pl
-#   Russian -> ru
-#   Spanish -> es
-#   Italian -> it
-#   Simplified Chinese -> zh-cn
+# bg     Bulgarian
+# ca     Catalan
+# de     German
+# el     Greek [NOT gr!]
+# en     English
+# eo     Esperanto
+# es     Spanish
+# fa     Persian
+# fr     French
+# hr     Croatian
+# it     Italian
+# jp     Japanese
+# nl     Dutch
+# pt_br  Portuguese (Brasil)
+# pl     Polish
+# ru     Russian
+# tr_tr  Turkish (Turkey)
+# zh_cn  Chinese (Simplified)
 #
 # If you want to use Nikola with a non-supported language you have to provide
 # a module containing the necessary translations
@@ -61,10 +67,7 @@ NAVIGATION_LINKS = {
     ),
 }
 
-
-##############################################
 # Below this point, everything is optional
-##############################################
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 #
@@ -315,6 +318,13 @@ COMMENT_SYSTEM = "disqus"
 # is in the manual.
 COMMENT_SYSTEM_ID = "arusahni"
 
+# Enable annotations using annotateit.org?
+# If set to False, you can still enable them for individual posts and pages
+# setting the "annotations" metadata.
+# If set to True, you can disable them for individual posts and pages using
+# the "noannotations" metadata.
+# ANNOTATIONS = False
+
 # Create index.html for story folders?
 # STORY_INDEX = False
 # Enable comments on story pages?
@@ -357,7 +367,7 @@ STRIP_INDEXES = True
 # If True, future dated posts are allowed in deployed output
 # Only the individual posts are published/deployed; not in indexes/sitemap
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
-# DEPLOY_FUTURE = True
+# DEPLOY_FUTURE = False
 # If False, draft posts will not be deployed
 DEPLOY_DRAFTS = True
 
@@ -387,6 +397,12 @@ DEPLOY_DRAFTS = True
 #});
 #</script>
 #"""
+
+# Do you want to customize the nbconversion of your IPython notebook?
+# IPYNB_CONFIG = {}
+# With the following example configuracion you can use a custom jinja template
+# called `toggle.tpl` which has to be located in your site/blog main folder:
+# IPYNB_CONFIG = {'Exporter':{'template_file': 'toggle'}}
 
 # What MarkDown extensions to enable?
 # You will also get gist, nikola and podcast because those are
@@ -556,11 +572,14 @@ TWITTER_CARD = {
 }
 
 
-# If you want to use formatted post time in W3C-DTF Format
-# (ex. 2012-03-30T23:00:00+02:00),
-# set timzone if you want a localized posted date.
+# Post's dates are considered in GMT by default, if you want to use 
+# another timezone, please set TIMEZONE to match. Check the available 
+# list from Wikipedia:
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Also, if you want to use a different timezone in some of your posts, 
+# you can use W3C-DTF Format (ex. 2012-03-30T23:00:00+02:00)
 #
-# TIMEZONE = 'Europe/Zurich'
+TIMEZONE = 'America/New_York'
 
 # If webassets is installed, bundle JS and CSS to make site loading faster
 # USE_BUNDLES = True

@@ -4,7 +4,7 @@
 .. title: Multithreading your Flask dev server to safety
 .. description: In which I share a quick tip on how to make Flask's dev server not suck when handling multiple users.
 
-`Flask <http://flask.pocoo.org/>`_ is awesome. It's lightweight enough to disappear, but extensible enough to be able to get some niceties such as auth and ACLs without much effort.  On top of that, the Werkzeug debugger is pretty handy (:doc:`not as nice as wdb's, though <wdb-attachment>`).
+`Flask <http://flask.pocoo.org/>`_ is awesome. It's lightweight enough to disappear, but extensible enough to be able to get some niceties such as auth and ACLs without much effort.  On top of that, `the Werkzeug debugger <http://werkzeug.pocoo.org/>`_ is pretty handy (:doc:`not as nice as wdb's, though <wdb-attachment>`).
 
 Things were going swimmingly until our QA server went down.  While the server may have stopped, development didn't, and we needed a way to get testable builds up and running for QA.  One of my fellow developers quickly stood up an instance of our application on a lightly-used box that was nearing the end of its usefulness.  To get around the fact that the machine wasn't outfitted for httpd action, the developer just backgrounded an instance of the Flask development server and established an SSH tunnel for our QA team to use.  This was deemed acceptable by our QA team of one.  We rejoiced and went back to work.
 
@@ -19,7 +19,6 @@ This, much like with everything else in the framework, was surprisingly easy. `F
 .. code:: python
 
   app.run(host="0.0.0.0", port=8080, threaded=True)
-
 
 ... and then threw it back over the wall to QA.  I moseyed on over to test-land shortly thereafter to discover them chipping away at a backlog of tasks, with the webserver serving away as if nothing happened.
 

@@ -2,7 +2,7 @@
 .. date: 2013-10-06 15:31:00
 .. slug: wdb-attachment
 .. title: Running wdb alongside your development server
-.. description: In which I share a script that I wrote to start and stop alongside a development webserver.
+.. description: In which I share a script that I wrote to start and stop wdb alongside a development webserver.
 .. comments: true
 
 We've been using the wonderful `wdb <https://github.com/Kozea/wdb>`_ WSGI middleware tool at work to aid in debugging our Flask app.  The features it brings to the table have helped immensely with development, and it has quickly established itself as a integral part of my toolbox.

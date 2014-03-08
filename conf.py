@@ -57,6 +57,21 @@ TRANSLATIONS = {
     # "es": "./es",
 }
 
+
+# What will translated input files be named like?
+
+# If you have a page something.rst, then something.rst.pl will be considered
+# its Polish translation.
+#     (in the above example: path == "something", lang == "pl", ext == "rst")
+# this pattern is also used for metadata:
+#     something.meta -> something.meta.pl
+
+TRANSLATIONS_PATTERN = "{path}.{ext}.{lang}"
+
+# If you don't want your Polish files to be considered Perl code, use this:
+# TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
+#     Note that this pattern will become the default in v7.0.0.
+
 # Links for the sidebar / navigation bar.
 # You should provide a key-value pair for each used language.
 NAVIGATION_LINKS = {
@@ -68,6 +83,17 @@ NAVIGATION_LINKS = {
 }
 
 # Below this point, everything is optional
+
+# While nikola can select a sensible locale for each language,
+# sometimes explicit control can come handy.
+# In this file we express locales in the string form that
+# python's locales will accept in your OS, by example
+# "en_US.utf8" in unix-like OS, "English_United States" in Windows.
+# LOCALES = dict mapping language --> explicit locale for the languages
+# in TRANSLATIONS. You can ommit one or more keys.
+# LOCALE_FALLBACK = locale to use when an explicit locale is unavailable
+# LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
+# not set the default Nikola mapping is used.
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 #
@@ -159,12 +185,20 @@ INDEX_PATH = "blog"
 
 # Create per-month archives instead of per-year
 # CREATE_MONTHLY_ARCHIVE = False
+# Create one large archive instead of per-year
+# CREATE_SINGLE_ARCHIVE = False
 # Final locations for the archives are:
 # output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html
 ARCHIVE_PATH = "blog"
 # ARCHIVE_FILENAME = "archive.html"
+
+# URLs to other posts/pages can take 3 forms:
+# rel_path: a relative URL to the current page/post (default)
+# full_path: a URL with the full path from the root
+# absolute: a complete URL (that includes the SITE_URL)
+# URL_TYPE = 'rel_path'
 
 # Final locations are:
 # output / TRANSLATION[lang] / RSS_PATH / rss.xml
@@ -228,10 +262,32 @@ DEPLOY_COMMANDS = [
 #    ".jpg": ["jpegoptim --strip-all -m75 -v %s"],
 # }
 
-# Create a gzipped copy of each generated file. Cheap server-side optimization.
+# Expert setting! Create a gzipped copy of each generated file. Cheap server-
+# side optimization for very high traffic sites or low memory servers.
 # GZIP_FILES = False
 # File extensions that will be compressed
-# GZIP_EXTENSIONS = ('.txt', '.htm', '.html', '.css', '.js', '.json')
+# GZIP_EXTENSIONS = ('.txt', '.htm', '.html', '.css', '.js', '.json', '.xml')
+# Use an external gzip command? None means no.
+# Example: GZIP_COMMAND = "pigz -k {filename}"
+# GZIP_COMMAND = None
+# Make sure the server does not return a "Accept-Ranges: bytes" header for
+# files compressed by this option! OR make sure that a ranged request does not
+# return partial content of another representation for these resources. Do not
+# use this feature if you do not understand what this means.
+
+# Compiler to process LESS files.
+# LESS_COMPILER = 'lessc'
+
+# A list of options to pass to the LESS compiler.
+# Final command is: LESS_COMPILER LESS_OPTIONS file.less
+# LESS_OPTIONS = []
+
+# Compiler to process Sass files.
+# SASS_COMPILER = 'sass'
+
+# A list of options to pass to the Sass compiler.
+# Final command is: SASS_COMPILER SASS_OPTIONS file.s(a|c)ss
+# SASS_OPTIONS = []
 
 # #############################################################################
 # Image Gallery Options
@@ -243,15 +299,22 @@ DEPLOY_COMMANDS = [
 # THUMBNAIL_SIZE = 180
 # MAX_IMAGE_SIZE = 1280
 # USE_FILENAME_AS_TITLE = True
+# EXTRA_IMAGE_EXTENSIONS = []
+#
+# If set to False, it will sort by filename instead. Defaults to True
+# GALLERY_SORT_BY_DATE = True
 
 # #############################################################################
 # HTML fragments and diverse things that are used by the templates
 # #############################################################################
 
-# Data about post-per-page indexes
-# INDEXES_TITLE = ""  # If this is empty, the default is BLOG_TITLE
-# INDEXES_PAGES = ""  # If this is empty, the default is 'old posts page %d'
-# translated
+# Data about post-per-page indexes.
+# INDEXES_PAGES defaults to 'old posts, page %d' or 'page %d' (translated),
+# depending on the value of INDEXES_PAGES_MAIN.
+# INDEXES_TITLE = ""         # If this is empty, defaults to BLOG_TITLE
+# INDEXES_PAGES = ""         # If this is empty, defaults to '[old posts,] page %d' (see above)
+# INDEXES_PAGES_MAIN = False # If True, INDEXES_PAGES is also displayed on
+                             # the main (the newest) index page (index.html)
 
 # Name of the theme to use.
 THEME = 'mysite'
@@ -603,6 +666,34 @@ TIMEZONE = 'America/New_York'
 
 # If set to True, enable optional hyphenation in your posts (requires pyphen)
 # HYPHENATE = False
+
+# The <hN> tags in HTML generated by certain compilers (reST/Markdown)
+# will be demoted by that much (1 → h1 will become h2 and so on)
+# This was a hidden feature of the Markdown and reST compilers in the
+# past.  Useful especially if your post titles are in <h1> tags too, for
+# example.
+# (defaults to 1.)
+# DEMOTE_HEADERS = 1
+
+# You can configure the logging handlers installed as plugins or change the
+# log level of the default stdout handler.
+LOGGING_HANDLERS = {
+    'stderr': {'loglevel': 'WARNING', 'bubble': True},
+    #'smtp': {
+    #    'from_addr': 'test-errors@example.com',
+    #    'recipients': ('test@example.com'),
+    #    'credentials':('testusername', 'password'),
+    #    'server_addr': ('127.0.0.1', 25),
+    #    'secure': (),
+    #    'level': 'DEBUG',
+    #    'bubble': True
+    #}
+}
+
+# Templates will use those filters, along with the defaults.
+# Consult your engine's documentation on filters if you need help defining
+# those.
+# TEMPLATE_FILTERS = {}
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.

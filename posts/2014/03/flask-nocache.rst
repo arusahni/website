@@ -29,4 +29,4 @@ To invoke it, all you need to do is import the function and apply it to your end
   def my_endpoint():
       return render_template(...)
       
-I took this back to QA and was met with success.  The downside of this manual implementation, however, is one needs to be religious in applying it. To this day we still stumble upon cases where a developer forgot to add the decorator to a JSON endpoint.  Thankfully, code review processes a perfect for catching that sort of omission.
+I took this back to QA and was met with success.  The downside of this manual implementation, however, is one needs to be religious in applying it. To this day we still stumble upon cases where a developer forgot to add the decorator to a JSON endpoint.  Thankfully, code review processes are perfect for catching that sort of omission.

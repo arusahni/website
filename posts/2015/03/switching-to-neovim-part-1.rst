@@ -48,10 +48,16 @@ Hm.  That's strange.  `The relevant help docs <https://github.com/neovim/neovim/
     let s:uname = system("uname")
     let g:python_host_prog='/usr/bin/python'
     if s:uname == "Darwin\n"
-      let g:python_host_prog='/usr/local/bin/python'
+      let g:python_host_prog='/usr/local/bin/python' # found via `which python`
     endif
   endif
 
 Restarting NeoVim with that configuration block in place let it find my system Python and all associated plugins.
 
 I'll keep this site updated with any new discoveries and NeoVim experiments! I'm quite eager to see how the client-server integrations flesh out.
+
+*I've written more on this!* |p2link|_.
+
+.. _p2link: link://slug/switching-to-neovim-part-2
+
+.. |p2link| replace:: *Part 2*

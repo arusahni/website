@@ -6,7 +6,7 @@
 .. description: In which I describe how I parameterized hardcoded Vim paths in my vimrc.
 .. type: text
 
-`Now that my initial NeoVim configuration is in place <link://slug/switching-to-neovim-part-1>`_, I'm ready to get to work, right? Well, almost. In my excitement to make the leap from one editor to another, I seem to have neglected a portion of my attempt to keep Vim and NeoVim truly isolated - the local runtimepath (usually :code:`~/.vim`).
+`Now that my initial NeoVim configuration is in place <link://slug/switching-to-neovim-part-1>`_, I'm ready to get to work, right? Well, almost. In my excitement to make the leap from one editor to another, I neglected a portion of my attempt to keep Vim and NeoVim isolated - the local runtimepath (usually :code:`~/.vim`).
 
 "But Aru, if NeoVim is basically Vim, shouldn't they be able to share the directory?" Usually, yes. But I anticipate, as I start to experiment with some of the new features and functionality of NeoVim, I might add plugins that I want to keep isolated from my Vim instance.
 
@@ -26,11 +26,11 @@ e.g. :code:`let &rtp = &rtp . ',.vim/bundle/vundle/'` |srarr| :code:`let &rtp = 
 
 .. |srarr|     unicode:: U+02192
 
-With those replacements out of the way, things *almost* worked fine. Almost.
+With those replacements out of the way, things *almost* worked. Almost.
 
 I use `Vundle <https://github.com/gmarik/Vundle.vim>`_. I think it's pretty rad. `My vimrc file is configured to automatically install it and download all of the defined plugins in the event of a fresh installation <https://github.com/arusahni/dotfiles/blob/45c6655d46d1f672cc36f4e81c2a674484739ebc/vimrc#L42>`_.  The first time I launched NeoVim with the above changes didn't result in a fresh install - it was still reading the :code:`~/.vim` directory's plugins.
 
-Perplexed, I dove into the Vundle code. Sure enough, it appears to default to installing plugins to :code:`$HOME/.vim/` if a directory isn't passed in to the script initialization function.  It appears that I was reliant on this default behavior. Thankfully, this was easily solved by passing in my own bundle path:
+Perplexed, I dove into the Vundle code. Sure enough, it appears to default to installing plugins to :code:`$HOME/.vim` if a directory isn't passed in to the script initialization function.  It appears that I was reliant on this default behavior. Thankfully, this was easily solved by passing in my own bundle path:
 
 .. code:: vim
 

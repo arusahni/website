@@ -1,0 +1,39 @@
+---
+# This playbook provisions the website
+
+- name: Provision website
+  hosts: arusahni.net
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install necessary package
+      apt: pkg={{ item }}
+      with_items:
+        - vim
+        - nginx
+        - htop
+    - name: Create SSH directory
+      file:
+        path: /www/website
+        state: directory
+        owner: "{{ ansible_user }}"
+      notify: restart nginx
+    - name: Configure Nginx
+      copy:
+        src: website.nginx.conf
+        dest: /etc/nginx/sites-available/website
+      notify: restart nginx
+    - name: Disable default site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: restart nginx
+    - name: Enable website
+      file:
+        src: /etc/nginx/sites-available/website
+        dest: /etc/nginx/sites-enabled/website
+        state: link
+      notify: restart nginx
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted

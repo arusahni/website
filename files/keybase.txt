@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/aru
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://arusahni.net
+  * I am aru (https://keybase.io/aru) on keybase.
+  * I have a public key with fingerprint 2011 76AC B21E 3246 2373  2D65 B1FF 0FEB 6864 4ED4
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "201176acb21e324623732d65b1ff0feb68644ed4",
+            "host": "keybase.io",
+            "key_id": "b1ff0feb68644ed4",
+            "uid": "b919cfe2108ef6d001dc765ea6a9e800",
+            "username": "aru"
+        },
+        "service": {
+            "hostname": "arusahni.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411820699,
+    "expire_in": 157680000,
+    "prev": "714a4aa7ef0db08b5285ab222640199f1bea4c2e3fc1a9921c0569b647f9ea4d",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMHfAnicbVFbSBRRGN71Vm6FYkEppTnIirLpnDOzszsbRBDSZhEVRkbGembmzO6k
+zayzs+pia2AECYVgVoYYSgpd3Bfp8mJkUWZ0wdKMHgyWsgjFFt2npOhMF3rp6XC+
+2//9/I/WpFps1nMFRXPNTFXY+mx0Pmypsg/1tFCCJkUoTwtVh389sqL6sR7UFdWg
+PBSkAXBxSBQgwAxkOci4GChxTgHIMi1jgXNzLIsllnJQAS1kOkiMgEK4TNEIRj4+
+RSLof/Th3wQPeFHGENBuLHMSTQNJdHFOjDjEYzdNm8IQ1lV0HBM10sNU1EERoFER
+sVnXnPqPDKGAqpSp2CC2oK4ZmqjVEyZgGEGPaTQiQVPZhAXfnwyfoKgSWZkYGrEe
+UjSV8gCiFA3FDAUsAG5IczzvoHBzUNGxTzEVThdHytG0OQY3kkgXYBGLkAvLtCTQ
+bsEJ3U4kQAg5lgY8LwMBI1aEmJFFgHgeApF2crzAsS6ZJ4xEmVs1qBrlYUhN5CeR
+IcWvIiOsYyr6cLQmzWK1WTLSU8yjWWyZ2X9PWZBcsZxOndkXyx+pXG4tLsgayEmr
+Xllqf8PsXg70rR1vurF/vsguX15K1esqFrNrkgen+xLdWzLik/LbY8zeW2rHzdxZ
+78ent3/Y1t3hphZ7+WHb0Y6heFdxNbYWNkRfH2rfHIgsXItMVl+qff/ZUdmZklPM
+nJhwR70P+m0lmQ3jS1nbOK3/U/LVqnroL793tRdeEdsWq8QjeiJ2/roqt3UPHY6F
+HfhrXYv98fRC/rfOXbWJ02MHcqe9RvvzTfkVPe+mvrAXQjPxrYV5JXdfzuyc+HBy
+T97I3OqzA4Pbk/4xb/n3ixsTcy9m7+fGd7TirvUzRXrpZCzzFDM/vOGJsBD4CeLF
+EDs=
+=UU7a
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aru
+
+==================================================================
+

@@ -411,7 +411,7 @@ REDIRECTIONS = [
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
-        'rsync -arvuz output/ aru@arusahni.net:/home1/aru/public_html/ --exclude ".git"',
+        'rsync -arvuz output/ arusahni.net:/www/website/ --exclude ".git"',
     ]
 }
 

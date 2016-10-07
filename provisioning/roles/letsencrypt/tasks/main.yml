@@ -1,0 +1,56 @@
+---
+- name: create letsencrypt directory
+  file: path=/etc/letsencrypt owner=root group=root mode=0755 state=directory
+  become: yes
+  tags:
+    - letsencrypt
+
+- name: Download certbot-auto
+  get_url:
+    url: https://dl.eff.org/certbot-auto
+    dest: /usr/local/sbin
+    mode: a+x
+    owner: root
+    group: root
+  become: yes
+
+- name: Install certbot deps
+  command: /usr/local/sbin/certbot-auto --noninteractive --os-packages-only
+  become: yes
+  tags:
+    - letsencrypt
+
+- name: Deploy LetsEncrypt config
+  template:
+    src: letsencrypt.ini.j2
+    dest: /etc/letsencrypt/cli.ini
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+  tags:
+    - letsencrypt
+
+- name: Generate cert
+  command: /usr/local/sbin/certbot-auto certonly --config /etc/letsencrypt/cli.ini
+  become: yes
+  tags:
+    - letsencrypt
+
+- name: add a monthly cron job to renew letsencrypt certificate monthly
+  cron:
+    name: renew letsencrypt
+    special_time: monthly
+    job: certbot-auto certonly --config /etc/letsencrypt/cli.ini
+  become: yes
+  tags:
+    - cron
+    - letsencrypt
+
+
+- name: Create Diffie Helman key
+  command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048 creates=/ets/ssl/certs/dhparam.pem
+  become: yes
+  tags:
+    - letsencrypt
+

@@ -1,0 +1,24 @@
+# LetsEncrypt config file
+
+# Use a 4096 bit RSA key instead of 2048
+rsa-key-size = 4096
+
+# Register with the specified e-mail address
+email = {{ server_admin_email }}
+
+# Generate certificates for the specified domains
+domains = {{ domain_names | join(", ") }}
+
+# Uncomment to use the webroot authenticator. Replace webroot-path with the
+# path to the public_html / webroot folder being served by your web server.
+authenticator = webroot
+webroot-path = {{ webroot_path }}
+
+# Use a text interface instead of ncurses
+text = True
+
+# Automatically agree to the Terms of Service
+agree-tos = True
+
+# Run the app so it knows to renew existing certificates
+renew-by-default = True

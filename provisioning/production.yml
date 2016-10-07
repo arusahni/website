@@ -5,16 +5,22 @@
   hosts: arusahni.net
   become: yes
   become_method: sudo
+  vars:
+    - domain_names:
+      - arusahni.net
+      - www.arusahni.net
+    - server_admin_email: admin@arusahni.net
+    - webroot_path: /www/website
   tasks:
-    - name: Install necessary package
+    - name: Install necessary packages
       apt: pkg={{ item }}
       with_items:
         - vim
         - nginx
         - htop
-    - name: Create SSH directory
+    - name: Create web root directory
       file:
-        path: /www/website
+        path: "{{ webroot_path }}"
         state: directory
         owner: "{{ ansible_user }}"
       notify: restart nginx
@@ -34,6 +40,8 @@
         dest: /etc/nginx/sites-enabled/website
         state: link
       notify: restart nginx
+  roles:
+    - letsencrypt
   handlers:
     - name: restart nginx
       service: name=nginx state=restarted

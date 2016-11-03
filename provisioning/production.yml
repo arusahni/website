@@ -28,17 +28,23 @@
       copy:
         src: website.nginx.conf
         dest: /etc/nginx/sites-available/website
+      tags:
+        - nginx
       notify: restart nginx
     - name: Disable default site
       file:
         path: /etc/nginx/sites-enabled/default
         state: absent
+      tags:
+        - nginx
       notify: restart nginx
     - name: Enable website
       file:
         src: /etc/nginx/sites-available/website
         dest: /etc/nginx/sites-enabled/website
         state: link
+      tags:
+        - nginx
       notify: restart nginx
   roles:
     - letsencrypt

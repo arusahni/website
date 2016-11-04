@@ -6,16 +6,18 @@
 .. description: In which I describe how I parameterized hardcoded Vim paths in my vimrc.
 .. type: text
 
+*2016-11-03 Update: Now using the XDG-compliant configuration location.*
+
 `Now that my initial NeoVim configuration is in place <link://slug/switching-to-neovim-part-1>`_, I'm ready to get to work, right? Well, almost. In my excitement to make the leap from one editor to another, I neglected a portion of my attempt to keep Vim and NeoVim isolated - the local runtimepath (usually :code:`~/.vim`).
 
 "But Aru, if NeoVim is basically Vim, shouldn't they be able to share the directory?" Usually, yes. But I anticipate, as I start to experiment with some of the new features and functionality of NeoVim, I might add plugins that I want to keep isolated from my Vim instance.
 
-I'd like Vim to use :code:`~/.vim` and NeoVim to use :code:`~/.nvim`.  Accomplishing this is simple - I must first detect whether or not I'm running NeoVim and base the root path on the outcome of that test:
+I'd like Vim to use :code:`~/.vim` and NeoVim to use :code:`~/.config/nvim`.  Accomplishing this is simple - I must first detect whether or not I'm running NeoVim and base the root path on the outcome of that test:
 
 .. code:: vim
 
   if has('nvim')
-      let s:editor_root=expand("~/.nvim")
+      let s:editor_root=expand("~/.config/nvim")
   else
       let s:editor_root=expand("~/.vim")
   endif
@@ -36,4 +38,4 @@ Perplexed, I dove into the Vundle code. Sure enough, it appears to default to in
 
   call vundle#rc(s:editor_root . '/bundle')
 
-And with that, my Vim and NeoVim instances were fully segregated.
+And with that, my Vim and NeoVim instances were fully isolated.

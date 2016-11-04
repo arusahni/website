@@ -2,13 +2,15 @@
 .. slug: switching-to-neovim-part-1
 .. date: 2015-03-31 22:49:11 UTC-04:00
 .. tags: vim, linux, osx
-.. link: 
+.. link:
 .. description: In which I describe the process by which I switched from Vim to NeoVim.
 .. type: text
 
+*2016-11-03 Update: Now using the XDG-compliant configuration location.*
+
 `NeoVim <http://neovim.org/>`_ is all the rage these days, and I can't help but be similarly enthused. Unlike other editors, which have varying degrees of crappiness with their Vim emulation, NeoVim *is* Vim.
 
-If it's Vim, why bother switching? Much like all squares are rectangles, but not all rectangles are squares, NeoVim has a different set of aspirations and features.  While vanilla Vim has the (noble and important) goal of supporting all possible platforms, that legacy has seemingly held it back from eliminating warts and adding new features.  That's both a good thing and a bad thing. Good because it's stable, bad because it can lead to stagnation.  A Vim contributor, annoyed with how the project was seemingly hamstrung by this legacy (with its accompanying byzantine code structure, project structure, and conventions), decided to take matters into his hands and fork the editor.  
+If it's Vim, why bother switching? Much like all squares are rectangles, but not all rectangles are squares, NeoVim has a different set of aspirations and features.  While vanilla Vim has the (noble and important) goal of supporting all possible platforms, that legacy has seemingly held it back from eliminating warts and adding new features.  That's both a good thing and a bad thing. Good because it's stable, bad because it can lead to stagnation.  A Vim contributor, annoyed with how the project was seemingly hamstrung by this legacy (with its accompanying byzantine code structure, project structure, and conventions), decided to take matters into his hands and fork the editor.
 
 The name of the fork?  NeoVim.
 
@@ -30,7 +32,8 @@ Suprise!  It Just |Works (TM)|.  Remember, NeoVim *is* Vim, as such it shares th
 
 .. code:: console
 
-  $ ln -s ~/.vimrc ~/.neovimrc
+  $ mkdir -p ~/.config/nvim
+  $ ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 After that, it's a simple matter of invoking :code:`nvim` from the command line.  Everything loaded and worked for me from the first run!
 

@@ -41,7 +41,7 @@
   cron:
     name: renew letsencrypt
     special_time: monthly
-    job: certbot-auto certonly --config /etc/letsencrypt/cli.ini
+    job: "certbot-auto certonly --config /etc/letsencrypt/cli.ini && service nginx restart"
   become: yes
   tags:
     - cron

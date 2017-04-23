@@ -32,7 +32,7 @@
     - letsencrypt
 
 - name: Generate cert
-  command: /usr/local/sbin/certbot-auto certonly --config /etc/letsencrypt/cli.ini
+  command: /usr/local/sbin/certbot-auto certonly --config /etc/letsencrypt/cli.ini creates=/etc/letsencrypt/live/arusahni.net/cert.pem
   become: yes
   tags:
     - letsencrypt

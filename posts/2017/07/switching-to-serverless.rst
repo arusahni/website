@@ -1,10 +1,12 @@
 .. title: Switching to Serverless
 .. slug: switching-to-serverless
 .. date: 2017-06-23 16:23:28 UTC-04:00
-.. tags: tech, serverless, cloud, python
+.. tags: tech, serverless, cloud, python, draft
 .. link:
 .. description: In which I describe how I migrated a Python application to a serverless environment.
 .. type: text
+.. status: draft
+
 
 A few years ago, I wrote a webapplication to address a glaring need - hunger.
 Specifically, my hunger.  This webapp took the form of a Slack integration
@@ -15,19 +17,19 @@ DC Python <https://www.youtube.com/watch?v=qR8e9MopTII>`_).
 This application (Slacktrux) was running smoothly on a t2.micro instance on
 AWS.  Like the best programs, I was able to set it up and then not think about
 it.  This extreme reliability had a very real cost, however: money.
-Specifically, I received an AWS bill a few months ago for the monthly cost of
-that EC2 instance. (The reason it had suddenly popped up is I had credit for a
+I received an AWS bill a few months ago for the monthly cost of that EC2
+instance. (The reason it had suddenly popped up is I had credit for a
 reserved instance for another project that I ended up decommissioning a few
 months back, and the remaining time had ceded to that instance, which had just
-come off the introductory free year of it's life).  I like being able to
-provide this service to others, but not $20/month-like.  If I wanted to keep
+come off the introductory free year of its life).  I liked being able to
+provide this service to others, but not at $20 a month.  If I wanted to keep
 Slacktrux available to my friends and coworkers, I needed to do *something*.
 Enter the latest buzzword in computing: serverless architectures.
 
 Put simply, a serverless architecture is one when you decompose your
-application into a series of stateless functions that can be invoked as a
-service.  Their ephemeral nature makes them cost efficient (i.e., you only pay
-for the cycles you use), as well as very scalable (i.e., the functional
+application into a series of stateless functions that can be invoked as standalone
+services.  Their ephemeral nature makes them cost efficient (i.e., you only pay
+for the cycles you use), as well as highly scalable (i.e., the functional
 abstraction can scale horizontally to meet increased demand).  If I could
 somehow rearchitect Slacktrux as a serverless application, I may well be able
 to keep the foodtruck lights on, while keeping my fridge stocked with beer.
@@ -65,5 +67,3 @@ everywhere. Amazon Web Services has Lambda, Google Cloud Platform has Cloud
 Functions, and Microsoft Azure has Azure Functions.  They all support Python,
 but, for the sake of convenience and knowledge portability (the organizations I
 support at work are all-in on AWS), I chose Lambda.
-
-

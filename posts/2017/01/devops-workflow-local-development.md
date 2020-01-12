@@ -4,7 +4,7 @@
     .. date: 2017-01-09 09:48:21 UTC-05:00
     .. tags: tech, devops
     .. link:
-    .. description: A sample devops process, starting at local development.
+    .. description: The first part of a series on my sample devops process, starting at local development.
 -->
 
 _This series is a longform version of an internal talk I gave at a former
@@ -245,5 +245,6 @@ using Ansible with Vagrant, you should instead use `vagrant provision`, as
 Vagrant will handle the mapping of hosts and authentication. And, no matter how
 many times you provision, the machine state should remain the same.
 
-This concludes the local development portion of our dive into DevOps. In the
-next installment, we'll cover continuous integration!
+_This concludes the local development portion of our dive into DevOps. In the
+next installment, we'll cover [continuous
+integration](link://slug/devops-workflow-ci)!_

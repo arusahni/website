@@ -196,15 +196,15 @@ test runners.
 
 Once Jenkins has access to your GitLab instance, it can:
 
-1. Poll for merge requests targeting the main development branch;
+1. Poll for merge requests targeting the main development branch;  
     ![Jenkins polling for MR screenshot](https://i.imgur.com/WuWIMMa.png)
-2. Attempt a merge of the feature branch into the trunk;
+2. Attempt a merge of the feature branch into the trunk;  
     ![Jenkins MR detection screenshot](https://i.imgur.com/LhlFds9.png)
-3. Run your linter;
+3. Run your linter;  
     ![Jenkins lint command screenshot](https://i.imgur.com/LhGmD6q.png)
-    * Define your acceptable lint severity thresholds
+    * Define your acceptable lint severity thresholds  
         ![Jenkins polling for MR screenshot](https://i.imgur.com/aqzc3jM.png)
-4. Run unit tests; and
+4. Run unit tests; and  
     ![Jenkins unit test screenshot](https://i.imgur.com/gmLIHxW.png)
 5. If any of the above steps result in a failure state, Jenkins will comment on
    the MR. Otherwise, the build is good, and the MR is given the green light.
@@ -217,4 +217,5 @@ always corresponds to your codebase. GitLab has also launched a [CI
 capability](https://about.gitlab.com/gitlab-ci/) that may also fit your needs.
 
 _This concludes the continuous integration portion of our dive into DevOps. In
-the next installment, we'll cover deployment!_
+the next installment, we'll cover
+[deployment](link://slug/devops-workflow-deployment)!_

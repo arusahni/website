@@ -953,7 +953,7 @@ SOCIAL_BUTTONS_CODE = """
 <ul>
     <li><a href="https://twitter.com/IAmAru" title="Twitter"><i class="icon-twitter"></i><span class="label">twitter</span></a></li>
     <li><a href="https://github.com/arusahni" title="Github"><i class="icon-github"></i><span class="label">github</span></a></li>
-    <li><a href="https://plus.google.com/+AruSahni?rel=author" title="Google+"><i class="icon-google-plus"></i><span class="label">google+</span></a></li>
+    <li><a href="https://www.linkedin.com/in/arusahni/" title="LinkedIn"><i class="icon-linkedin"></i><span class="label">google+</span></a></li>
 </ul>
 <!-- End of social buttons -->
 """

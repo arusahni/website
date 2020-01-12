@@ -3,7 +3,7 @@ Logbook==0.10.0
 Mako==1.0.1
 Markdown==2.4
 MarkupSafe==0.23
-Nikola==7.6.1
+Nikola==7.6.4
 Pillow==2.9.0
 PyRSS2Gen==1.1
 Pygments==2.0.2

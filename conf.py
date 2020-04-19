@@ -538,6 +538,9 @@ REDIRECTIONS = [
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
+        'aws s3 sync output s3://arusahni.net',
+    ],
+    'ec2': [
         'rsync -arvuz output/ arusahni.net:/www/website/ --exclude ".git"',
     ]
 }

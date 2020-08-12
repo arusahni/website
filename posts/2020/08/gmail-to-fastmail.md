@@ -119,10 +119,10 @@ display. Offline caching is hit or miss, and there's no ability to adjust
 caching per label.
 
 A positive, however, is that one can do almost everything on mobile that they
-can do on desktop, include set filters (unlike with Gmail). And notifications
+can do on desktop, including setting filters (unlike with Gmail). And notifications
 have been timely and prompt.
 
-At some point, I'll probably kick the tires on a new service.
+At some point, I'll probably kick the tires on a new app.
 
 ## Miscellaneous
 

@@ -1,5 +1,5 @@
 <!--
-    .. title: Kicking the Tires with Elixir (Part 1)
+    .. title: Kicking the Tires with Elixir, Part 1 - Pipes
     .. slug: elxir-intro-01
     .. date: 2020-08-12 17:41:11 UTC-04:00
     .. tags: tech, elixir

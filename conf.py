@@ -539,6 +539,7 @@ REDIRECTIONS = [
 DEPLOY_COMMANDS = {
     'default': [
         'aws s3 sync output s3://arusahni.net',
+        'aws cloudfront create-invalidation --distribution-id E162IMOO54IZ4M --paths "/blog/*"',
     ],
     'ec2': [
         'rsync -arvuz output/ arusahni.net:/www/website/ --exclude ".git"',

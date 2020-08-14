@@ -18,6 +18,8 @@ something runs. Without validation, your artisanal ramen may be
 indistinguishable from burned spaghetti. This is where unit testing and
 continuous integration really prove their worth.
 
+<!-- TEASER_END -->
+
 # Unit Testing
 
 You can't swing a dead cat without hitting a billion different Medium posts and

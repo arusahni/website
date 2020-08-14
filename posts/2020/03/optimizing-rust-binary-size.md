@@ -30,6 +30,8 @@ features as well as polish some rough edges. However, for how "simple" I felt
 the underlying program to be, it clocked in at 13 megabytes. That felt like a
 lot.  So, I decided to see what could be done.
 
+<!-- TEASER_END -->>
+
 For those playing along at home, the starting binary size was: **13535712
 bytes (12.9MB)**.
 

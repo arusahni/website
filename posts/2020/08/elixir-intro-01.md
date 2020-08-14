@@ -23,6 +23,8 @@ I have at least a few topics in mind.
 
 First up: pipes.
 
+<!-- TEASER_END -->>
+
 # Pipe ALL the Things
 
 Look at any Elixir code and one of the first things you'll stumble upon is

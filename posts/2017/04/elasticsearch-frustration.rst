@@ -51,6 +51,8 @@ problem, just delete the document, right?
 
 Wat.
 
+.. TEASER_END
+
 I reached out to some of my coworkers to see if they could point me in the
 right direction, but all that I received was an (unhelpful) "I've seen this
 error before, and we solved it, but no one seems to remember how it was done."

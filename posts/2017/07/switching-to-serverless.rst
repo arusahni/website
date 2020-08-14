@@ -34,6 +34,8 @@ abstraction can scale horizontally to meet increased demand).  If I could
 somehow rearchitect Slacktrux as a serverless application, I may well be able
 to keep the foodtruck lights on, while keeping my fridge stocked with beer.
 
+   .. TEASER_END
+
 Slacktrux 101
 -------------
 

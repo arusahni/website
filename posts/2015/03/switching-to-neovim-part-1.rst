@@ -16,6 +16,8 @@ The name of the fork?  NeoVim.
 
 It brings quite a lot to the table, and deserves a blog post or two in its own right.  `I'll leave the diffing as an exercise to the reader <https://github.com/neovim/neovim/wiki/Introduction>`_.  I plan on writing about some of those differences as I do more with the fork's unique features.
 
+.. TEASER_END
+
 So, what did I need to do to switch to NeoVim?  I installed it.  On Kubuntu, all I needed to do was add a PPA and install the :code:`neovim` package (and its Python bindings for full plugin support).
 
 .. code:: console

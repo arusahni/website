@@ -40,6 +40,8 @@ this is The One True Way™. We encourage our teams to experiment with new tools
 and methods, so this series presents a model that several teams have
 implemented with success, not official developer guidelines.
 
+<!-- TEASER_END -->
+
 # Development Environment: Vagrant
 
 In order to best capture external dependencies, one should start with a blank

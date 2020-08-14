@@ -15,6 +15,8 @@ all you need to do is put your application in front of your users to discover
 all the creative ways they'll break it. In order to do this, we'll have to
 create our instances, configure them, and deploy our code.
 
+<!-- TEASER_END -->
+
 # CloudFormation: Infrastructure Definition
 
 [Amazon Web Services (AWS)](https://aws.amazon.com/) is a common target for

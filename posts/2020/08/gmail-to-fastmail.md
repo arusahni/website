@@ -36,6 +36,8 @@ I have the means to pay for service, and nothing is keeping me on Gmail
 Leaving Gmail sounded doable, and I owned a personal domain on that I'd love to
 use for email. The only question was: where do I go for hosting?
 
+<!-- TEASER_END -->>
+
 ## Assessing the Field
 
 At the time of my research, there were a handful of buzzy, well-regarded

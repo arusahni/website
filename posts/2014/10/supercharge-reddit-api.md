@@ -38,6 +38,8 @@ practices for the good of all. We considered
 Python shop, settled on [PRAW (Python Reddit API
 Wrapper)](https://github.com/praw-dev/praw).
 
+<!-- TEASER_END -->
+
 With PRAW, getting a list of posts is pretty easy:
 
 ```python

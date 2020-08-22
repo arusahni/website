@@ -3,7 +3,7 @@
     .. slug: gmail-to-fastmail
     .. date: 2020-08-02 17:47:35 UTC-04:00
     .. tags: tech
-    .. description: In which I describe my migration from Gmail to Fastmail as email and calendar providers.
+    .. description: In which I describe my migration from Gmail to Fastmail as an email and calendar provider.
 -->
 
 In 2004, Google launched Gmail. This service changed everything. You didn't

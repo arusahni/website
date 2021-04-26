@@ -37,6 +37,8 @@ Your branch is up to date with 'origin/master'.
 Handy! But how does it work? I poked through the files in `.git` (and even
 watched the filesystem for changes, but nothing jumped out).
 
+<!-- TEASER_END -->>
+
 The good news is that Git is open source. So, let's go to the source.
 
 The Git repository is big. Git does a lot, it makes sense. How do I learn where

@@ -21,7 +21,7 @@ doit==0.28.0
 ipdb==0.8
 ipython==2.0.0
 livereload==2.3.2
-lxml==3.4.4
+lxml==4.6.5
 micawber==0.3.0
 natsort==4.0.3
 phpserialize==1.3

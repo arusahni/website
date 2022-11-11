@@ -955,8 +955,9 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 SOCIAL_BUTTONS_CODE = """
 <!-- Social buttons -->
 <div class="social-links">
-    <a href="https://twitter.com/IAmAru" title="Twitter"><i class="icon-twitter"></i><span class="label">Twitter</span></a>
     <a href="https://github.com/arusahni" title="Github"><i class="icon-github"></i><span class="label">GitHub</span></a>
+    <a href="https://twitter.com/IAmAru" title="Twitter"><i class="icon-twitter"></i><span class="label">Twitter</span></a>
+    <a rel="me" href="https://mstdn.io/@aru" title="Mastodon"><i class="icon-bullhorn"></i><span class="label">Mastodon</span></a>
     <a href="https://www.linkedin.com/in/arusahni/" title="LinkedIn"><i class="icon-linkedin"></i><span class="label">LinkedIn</span></a>
     <a href="http://feeds.feedburner.com/arusahni/entropy" title="RSS Feed"><i class="icon-rss-sign"></i><span class="label">RSS Feed</span></a>
 </div>

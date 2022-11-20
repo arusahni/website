@@ -618,7 +618,7 @@ LESS_COMPILER = 'themes/mysite/node_modules/less/bin/lessc'
 
 # A list of options to pass to the LESS compiler.
 # Final command is: LESS_COMPILER LESS_OPTIONS file.less
-LESS_OPTIONS = ['--yui-compress']
+LESS_OPTIONS = ['--clean-css=--s1 --advanced']
 
 # Compiler to process Sass files.
 # SASS_COMPILER = 'sass'

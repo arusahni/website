@@ -956,7 +956,7 @@ SOCIAL_BUTTONS_CODE = """
 <!-- Social buttons -->
 <div class="social-links">
     <a href="https://github.com/arusahni" title="Github"><i class="fa-brands fa-github"></i><span class="label">GitHub</span></a>
-    <a rel="me" href="https://mstdn.io/@aru" title="Mastodon"><i class="fa-brands fa-mastodon"></i><span class="label">Mastodon</span></a>
+    <a rel="me" href="https://hachyderm.io/@aru" title="Mastodon"><i class="fa-brands fa-mastodon"></i><span class="label">Mastodon</span></a>
     <a href="https://twitter.com/IAmAru" title="Twitter"><i class="fa-brands fa-twitter"></i><span class="label">Twitter</span></a>
     <a href="https://www.linkedin.com/in/arusahni/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i><span class="label">LinkedIn</span></a>
     <a href="http://feeds.feedburner.com/arusahni/entropy" title="RSS Feed"><i class="fa-solid fa-square-rss"></i><span class="label">RSS Feed</span></a>

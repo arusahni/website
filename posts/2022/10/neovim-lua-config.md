@@ -13,13 +13,14 @@ citizen in the editor. In places where you may otherwise be forced to wrangle
 the mess that is VimL (aka Vimscript), you can instead use a saner, faster
 scripting language.
 
-I initially held back from making the jump over to Lua as I held the ideal of
+I initially refrained from making the jump over to Lua as I held the ideal of
 being able to return to Vim whenever I wanted. With the release of Vim version
 8, which doubled down on VimL, I realized my folly. Vim wasn't going to
-suddenly adopt the good parts of Neovim, and nor was that community going to
+suddenly adopt the good parts of Neovim, nor was that community going to
 change overnight. With that, I sat down one Saturday to get to porting. After a
-few weeks of on-and-off experimentation, I landed on a stable, Lua-first config
-that's been humming along for several weeks now.
+few weeks of on-and-off experimentation (and exploring both /r/neovim and
+GitHub to see how other people did things) , I landed on a stable, Lua-first
+config that's been humming along for several weeks now.
 
 Let's dive in!
 
@@ -29,7 +30,7 @@ Let's dive in!
 
 One thing Lua brings to the table is a nice import system. This incentivizes
 smaller, more logical chunks of config. There's quite a variety of practices
-and preferences in the community. What I landed with (some elisions) is:
+and preferences in the community. What I ended up with (some elisions) is:
 
 ```text
 .
@@ -112,7 +113,7 @@ set.mouse = "a"
 -- additional config snipped for brevity
 ```
 
-One thing I immediate grew to appreciate was being able to configure boolean
+One thing I immediately grew to appreciate was being able to configure boolean
 settings via `true`/`false` assignment, rather than `set expandtab` or `set
 noexpandtab`. As a software engineer, this feels more ergonomic.
 
@@ -350,3 +351,5 @@ When will I be able to replace them? The Neovim developers have expressed:
 
 `nvim_cmd`, released with 0.8, cleaned up a few of those remaining occurrences.
 I'm not losing sleep over the remaining ones.
+
+[You can see my full configuration here](https://github.com/arusahni/dotfiles/tree/fd6bf6435763f6d29e95ec3c42cdc33aa2cf6952/nvim).

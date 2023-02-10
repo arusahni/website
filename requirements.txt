@@ -19,7 +19,7 @@ configparser==3.3.0.post2
 docutils==0.12
 doit==0.28.0
 ipdb==0.8
-ipython==2.0.0
+ipython==8.10.0
 livereload==2.3.2
 lxml==3.4.4
 micawber==0.3.0

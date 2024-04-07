@@ -1,8 +1,8 @@
-.. title: Repairing a Botched Arch Linux Kernel Update
+.. title: Repairing a Botched Arch Linux Kernel Upgrade
 .. slug: arch-crash-recovery-chroot
 .. date: 2024-04-06 22:00:00 UTC-04:00
 .. tags: linux
-.. description: In which I repair my Arch Linux system after a crash during a kernel update.
+.. description: In which I repair my Arch Linux system after a crash during a kernel upgrade.
 .. type: text
 
 I made the jump to Arch Linux on my personal and work computers a few years

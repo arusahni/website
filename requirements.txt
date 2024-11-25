@@ -1,6 +1,6 @@
 Jinja2==2.7.2
 Logbook==0.10.0
-Mako==1.0.1
+Mako==1.2.2
 Markdown==2.4
 MarkupSafe==0.23
 Nikola==7.6.4

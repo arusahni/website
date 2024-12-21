@@ -78,11 +78,13 @@ prompt to import a new PGP key. I then installed the release candidate kernel
 placed my headphones in pairing mode, selected them from the device list,
 and... success! They paired, and sure enough, I was able to play some music.
 
-Now, I could have stopped there and run a pre-release kernel for a month until
-a stable version was released, but this is my work system. I'd prefer to avoid
-bleeding-edge instability where possible. Since the problem appeared to be with
-pairing, now that the headphones were paired with the system, I wondered if I
-could just boot into my old kernel. Nothing to lose. I rebooted into the old
-version, hit connect, opened Tidal, hit play, and was greeted with my music.
+<s>Now, I could have stopped there and run a pre-release kernel for a month
+until a stable version was released, but this is my work system. I'd prefer to
+avoid bleeding-edge instability where possible. Since the problem appeared to
+be with pairing, now that the headphones were paired with the system, I
+wondered if I could just boot into my old kernel. Nothing to lose. I rebooted
+into the old version, hit connect, opened Tidal, hit play, and was greeted with
+my music.</s> EDIT (2024-12-20): This is incorrect. It still suffered from the
+same issue, so I needed to remain on the RC kernel.
 
 Moral of the story: never give up.
